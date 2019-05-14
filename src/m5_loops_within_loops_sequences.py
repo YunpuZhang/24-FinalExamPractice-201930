@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Yunpu Zhang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -39,7 +39,7 @@ def main():
 def run_test_integers():
     """ Tests the    integers    function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  integers  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond those we wrote.
     #
@@ -72,8 +72,28 @@ def run_test_integers():
     print('Expected is:', expected)
     print('Actual is:  ', answer)
 
+    # Test 2:
+    expected = [4, 1, 4, 10, 10, 1, 3, 4, 30, -4]
+    answer = integers([(4, 1, 4),
+                       (10, 'hi', 10),
+                       [1, 2.5, 3, 4],
+                       'hello',
+                       [],
+                       ['oops'],
+                       [[55], [44]],
+                       [30, -4]
+                       ])
+    print('Expected is:', expected)
+    print('Actual is:  ', answer)
+
 
 def integers(sequence_of_sequences):
+    list=[]
+    for k in range(len(sequence_of_sequences)):
+        for l in range(len(sequence_of_sequences[k])):
+            if type(sequence_of_sequences[k][l])==('int'):
+                list=list+sequence_of_sequences[k][l]
+    return  list
     """
     Returns a new list that contains all the integers
     in the subsequences of the given sequence, in the order that they

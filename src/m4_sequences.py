@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Yunpu Zhang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -102,14 +102,26 @@ def run_test_practice_problem4a():
                                []),
              st.SimpleTestCase(practice_problem4a,
                                ['abbabbb'],
-                               [1, 4, 5]),
-             ]
+                               [1, 4, 5]), ]
 
     # Run the 4 tests in the   tests   list constructed above.
     st.SimpleTestCase.run_tests('practice_problem4a', tests)
 
 
 def practice_problem4a(sequence):
+    list=()
+
+    for k in range(len(sequence)):
+        while True:
+            if k==len(sequence)-1:
+                return list
+            if sequence[k]==sequence[k+1]:
+                list=list+(k)
+
+
+
+
+
     """
     What comes in: A non-empty sequence.
     What goes out: Returns a list of integers,

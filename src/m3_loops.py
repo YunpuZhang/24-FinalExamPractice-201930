@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Yunpu Zhang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -46,7 +46,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ###########################################################################
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -110,6 +110,12 @@ def run_test_practice_problem3():
              st.SimpleTestCase(practice_problem3,
                                [0, 1, 1.414213562373],
                                [286602]),
+             st.SimpleTestCase(practice_problem3,
+                               [100, 5, 1.414],
+                               [139, 183, 516, 560, 849]),
+             st.SimpleTestCase(practice_problem3,
+                               [0, 1, 1.414213562373],
+                               [286602]),
              ]
     # 14th test:
     big_list = []
@@ -138,6 +144,20 @@ def run_test_practice_problem3():
 
 
 def practice_problem3(start, n, threshold):
+    list1=[]
+    x=0
+    while True:
+        if math.sin(start+x)+math.cos(start+x)>threshold:
+            list1=list1+[start+x]
+        x=x+1
+        if len(list1)==n:
+            return list1
+
+
+
+
+
+
     """
     What comes in:
       -- An integer:  start
@@ -209,7 +229,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ###########################################################################
