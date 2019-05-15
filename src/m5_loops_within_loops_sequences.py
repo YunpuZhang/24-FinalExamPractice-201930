@@ -182,7 +182,13 @@ def run_test_big_letters():
 
 
 def big_letters(sequence_of_sequences):
-    "O".isupper()
+    list=''
+    for k in range(len(sequence_of_sequences)):
+        for l in range(len(sequence_of_sequences[k])):
+            if type(sequence_of_sequences[k])==str and sequence_of_sequences[k][l].isupper()==True:
+                list=list+sequence_of_sequences[k][l]
+    return list
+
     """
     Returns a new STRING that contains all the upper-case letters
     in the subsequences of the given sequence that are strings,
