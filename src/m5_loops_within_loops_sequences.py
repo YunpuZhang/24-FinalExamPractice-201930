@@ -91,8 +91,8 @@ def integers(sequence_of_sequences):
     list=[]
     for k in range(len(sequence_of_sequences)):
         for l in range(len(sequence_of_sequences[k])):
-            if type(sequence_of_sequences[k][l])==('int'):
-                list=list+sequence_of_sequences[k][l]
+            if type(sequence_of_sequences[k][l])==int:
+                list=list+[sequence_of_sequences[k][l]]
     return  list
     """
     Returns a new list that contains all the integers
@@ -116,7 +116,7 @@ def integers(sequence_of_sequences):
       :rtype: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     ###########################################################################
@@ -182,6 +182,7 @@ def run_test_big_letters():
 
 
 def big_letters(sequence_of_sequences):
+    "O".isupper()
     """
     Returns a new STRING that contains all the upper-case letters
     in the subsequences of the given sequence that are strings,
